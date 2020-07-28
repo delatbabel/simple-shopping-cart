@@ -1,0 +1,198 @@
+version: 1
+creator: xdebug 2.9.6 (PHP 7.3.18)
+cmd: /var/www/html/index.php
+part: 1
+positions: line
+
+events: Time Memory
+
+fl=(1) php:internal
+fn=(1) php::session_start
+6 275 38120
+
+fl=(2) /var/www/html/dbcontroller.php
+fn=(2) require_once::/var/www/html/dbcontroller.php
+1 0 0
+
+fl=(1)
+fn=(3) php::mysqli_connect
+14 1700 43608
+
+fl=(2)
+fn=(4) DBController->connectDB
+13 12 0
+cfl=(1)
+cfn=(3)
+calls=1 0 0
+14 1700 43608
+
+fl=(2)
+fn=(5) DBController->__construct
+9 5 0
+cfl=(2)
+cfn=(4)
+calls=1 0 0
+10 1713 43608
+
+fl=(1)
+fn=(6) php::mysqli_query
+19 2676 16664
+
+fl=(1)
+fn=(7) php::mysqli_fetch_assoc
+20 1 552
+
+fl=(1)
+fn=(7)
+20 0 0
+
+fl=(2)
+fn=(8) DBController->runQuery
+18 17 -16368
+cfl=(1)
+cfn=(6)
+calls=1 0 0
+19 2676 16664
+cfl=(1)
+cfn=(7)
+calls=1 0 0
+20 1 552
+cfl=(1)
+cfn=(7)
+calls=1 0 0
+20 0 0
+
+fl=(1)
+fn=(9) php::array_keys
+17 0 376
+
+fl=(1)
+fn=(10) php::in_array
+17 0 0
+
+fl=(1)
+fn=(11) php::number_format
+84 1 40
+
+fl=(1)
+fn=(11)
+84 0 40
+
+fl=(1)
+fn=(11)
+84 0 40
+
+fl=(1)
+fn=(11)
+84 0 40
+
+fl=(1)
+fn=(11)
+96 0 40
+
+fl=(1)
+fn=(6)
+19 2236 16952
+
+fl=(1)
+fn=(7)
+20 0 544
+
+fl=(1)
+fn=(7)
+20 0 552
+
+fl=(1)
+fn=(7)
+20 0 560
+
+fl=(1)
+fn=(7)
+20 0 552
+
+fl=(1)
+fn=(7)
+20 0 0
+
+fl=(2)
+fn=(8)
+18 25 -16576
+cfl=(1)
+cfn=(6)
+calls=1 0 0
+19 2236 16952
+cfl=(1)
+cfn=(7)
+calls=1 0 0
+20 0 544
+cfl=(1)
+cfn=(7)
+calls=1 0 0
+20 0 552
+cfl=(1)
+cfn=(7)
+calls=1 0 0
+20 0 560
+cfl=(1)
+cfn=(7)
+calls=1 0 0
+20 0 552
+cfl=(1)
+cfn=(7)
+calls=1 0 0
+20 0 0
+
+fl=(3) /var/www/html/index.php
+fn=(12) {main}
+1 82 1256
+cfl=(1)
+cfn=(1)
+calls=1 0 0
+6 275 38120
+cfl=(2)
+cfn=(2)
+calls=1 0 0
+7 0 0
+cfl=(2)
+cfn=(5)
+calls=1 0 0
+8 1718 43608
+cfl=(2)
+cfn=(8)
+calls=1 0 0
+13 2696 848
+cfl=(1)
+cfn=(9)
+calls=1 0 0
+17 0 376
+cfl=(1)
+cfn=(10)
+calls=1 0 0
+17 0 0
+cfl=(1)
+cfn=(11)
+calls=1 0 0
+84 1 40
+cfl=(1)
+cfn=(11)
+calls=1 0 0
+84 0 40
+cfl=(1)
+cfn=(11)
+calls=1 0 0
+84 0 40
+cfl=(1)
+cfn=(11)
+calls=1 0 0
+84 0 40
+cfl=(1)
+cfn=(11)
+calls=1 0 0
+96 0 40
+cfl=(2)
+cfn=(8)
+calls=1 0 0
+114 2264 2584
+
+summary: 8859 508064
+

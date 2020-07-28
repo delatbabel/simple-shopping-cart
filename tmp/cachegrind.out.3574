@@ -1,0 +1,150 @@
+version: 1
+creator: xdebug 2.9.6 (PHP 7.3.18)
+cmd: /var/www/html/index.php
+part: 1
+positions: line
+
+events: Time Memory
+
+fl=(1) php:internal
+fn=(1) php::session_start
+6 249 38120
+
+fl=(2) /var/www/html/dbcontroller.php
+fn=(2) require_once::/var/www/html/dbcontroller.php
+1 1 0
+
+fl=(1)
+fn=(3) php::mysqli_connect
+14 87 43928
+
+fl=(2)
+fn=(4) DBController->connectDB
+13 6 0
+cfl=(1)
+cfn=(3)
+calls=1 0 0
+14 87 43928
+
+fl=(2)
+fn=(5) DBController->__construct
+9 5 0
+cfl=(2)
+cfn=(4)
+calls=1 0 0
+10 94 43928
+
+fl=(1)
+fn=(6) php::number_format
+84 1 40
+
+fl=(1)
+fn=(6)
+84 0 40
+
+fl=(1)
+fn=(6)
+84 0 40
+
+fl=(1)
+fn=(6)
+84 0 40
+
+fl=(1)
+fn=(6)
+96 0 40
+
+fl=(1)
+fn=(7) php::mysqli_query
+19 96 16952
+
+fl=(1)
+fn=(8) php::mysqli_fetch_assoc
+20 1 544
+
+fl=(1)
+fn=(8)
+20 0 552
+
+fl=(1)
+fn=(8)
+20 0 560
+
+fl=(1)
+fn=(8)
+20 0 552
+
+fl=(1)
+fn=(8)
+20 0 0
+
+fl=(2)
+fn=(9) DBController->runQuery
+18 22 -16576
+cfl=(1)
+cfn=(7)
+calls=1 0 0
+19 96 16952
+cfl=(1)
+cfn=(8)
+calls=1 0 0
+20 1 544
+cfl=(1)
+cfn=(8)
+calls=1 0 0
+20 0 552
+cfl=(1)
+cfn=(8)
+calls=1 0 0
+20 0 560
+cfl=(1)
+cfn=(8)
+calls=1 0 0
+20 0 552
+cfl=(1)
+cfn=(8)
+calls=1 0 0
+20 0 0
+
+fl=(3) /var/www/html/index.php
+fn=(10) {main}
+1 68 800
+cfl=(1)
+cfn=(1)
+calls=1 0 0
+6 249 38120
+cfl=(2)
+cfn=(2)
+calls=1 0 0
+7 1 0
+cfl=(2)
+cfn=(5)
+calls=1 0 0
+8 99 43928
+cfl=(1)
+cfn=(6)
+calls=1 0 0
+84 1 40
+cfl=(1)
+cfn=(6)
+calls=1 0 0
+84 0 40
+cfl=(1)
+cfn=(6)
+calls=1 0 0
+84 0 40
+cfl=(1)
+cfn=(6)
+calls=1 0 0
+84 0 40
+cfl=(1)
+cfn=(6)
+calls=1 0 0
+96 0 40
+cfl=(2)
+cfn=(9)
+calls=1 0 0
+114 122 2584
+
+summary: 4531 501880
+
