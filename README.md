@@ -29,8 +29,8 @@ getenforce
 # Set up for PHP applications
 dnf -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 dnf -y install https://rpms.remirepo.net/enterprise/remi-release-8.rpm
-dnf module install php:remi-7.3
 dnf module reset php
+dnf module install php:remi-7.3
 dnf config-manager --set-enabled PowerTools
 
 dnf -y install httpd
