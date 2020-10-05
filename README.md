@@ -93,11 +93,12 @@ firewall-cmd --list-all
 
 # Install simple shopping cart code
 cd /var/www/html
-unzip simple-php-shopping-cart.zip
-cd simple-php-shopping-cart/
+wget https://github.com/delatbabel/simple-shopping-cart/archive/v1.0-pt.zip
+unzip v1.0-pt.zip
+cd simple-shopping-cart-1.0-pt
 mv * ..
 cd ..
-rm -rf simple-php-shopping-cart
+rm -rf simple-shopping-cart-1.0-pt
 
 # Setup simplecart Database
 echo "grant all on simplecart.* to simpleuser@localhost identified by 'simplepass';" | mysql -u root -p
